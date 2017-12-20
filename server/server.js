@@ -7,7 +7,8 @@ const publicPath = path.join(__dirname, '../public');
 const port = process.env.PORT || 3000;
 
 var app = express();
-var server = http.createServer(app);
+var server = http.createServer(app);        createdAt: new Date().getTime()
+
 var io = socketIO(server);
 
 app.use(express.static(publicPath));
@@ -28,11 +29,11 @@ io.on('connection', (socket) => {
         createdAt: new Date().getTime()
     });
 
-    socket.emit('newMessage', {
-        from: 'dani@gmail.com',
-        text: "From: newMessage",
-        createdAt: 123
-    });
+    // socket.emit('newMessage', {
+    //     from: 'dani@gmail.com',
+    //     text: "From: newMessage",
+    //     createdAt: 123
+    // });
 
     socket.on('createEmail', (newEmail) =>{
         console.log('createEmail',newEmail);
