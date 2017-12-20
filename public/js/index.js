@@ -44,4 +44,8 @@ locationButton.on('click', function(){
   }, function() {
     alert('Unable to fetch location');
   });
+
+  socket.on('newLocationMessage', function(message){
+    var li = jQuery
+  });
 });
