@@ -15,9 +15,9 @@ socket.on('disconnect', function () {
   console.log('disconnected from socket.io');
 });
 
-socket.on('newEmail', function (email) {
-  console.log(`New email`,email);
-});
+// socket.on('newEmail', function (email) {
+//   console.log(`New email`,email);
+// });
 
 // socket.emit('createEmail', {
 //   to:'jen@example.com',
@@ -28,3 +28,10 @@ socket.on('newEmail', function (email) {
 socket.on('newMessage', function(message) {
   console.log('newMessage',message);
 });
+
+socket.emit('createMessage', {
+  from: 'Frank',
+  text: 'hi'
+}, function(data){
+  console.log('Response Received:',data);
+}); 
