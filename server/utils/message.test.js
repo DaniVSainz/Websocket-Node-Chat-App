@@ -17,7 +17,7 @@ describe('generateMessage' , () => {
 		expect(message).toInclude({
 			from,
 			text
-		})
+		});
 
 
 	});
