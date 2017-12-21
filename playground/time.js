@@ -3,4 +3,7 @@ var moment = require('moment');
 
 var date = moment();
 
-console.log(date.format());
+console.log(date.format('h:mm a'));
+
+var newDate = moment().valueOf();
+console.log(newDate);
