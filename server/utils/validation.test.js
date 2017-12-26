@@ -25,7 +25,7 @@ describe('checkValidator', () => {
         expect(isRealString(notAString)).toBeFalsy();
     });
     it('reject string with only spaces', ()=>{
-        var emptyString = '';
+        var emptyString = '   ';
         expect(isRealString(emptyString)).toBeFalsy();
     });
     it('allow a string with characters', ()=>{
