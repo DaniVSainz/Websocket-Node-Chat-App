@@ -46,6 +46,10 @@ socket.on('newMessage', function (message) {
   scrollToBottom();
 });
 
+socket.on('updateUserList', function(users) {
+  console.log('Users list', users);
+});
+
 socket.on('newLocationMessage', function (message) {
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#location-message-template').html();
